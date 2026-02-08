@@ -48,5 +48,8 @@ The data warehouse is modeled using **dimensional modeling techniques**, includi
 - **CSV Files** (Source Data)
 - **GitHub** (Version Control)
 - **Draw.io** (Architecture & Data Modeling Diagrams)
-  
 
+---
+
+## 📄 License
+This project is licenced under the MIT License. See the `LICENSE` file for details.
