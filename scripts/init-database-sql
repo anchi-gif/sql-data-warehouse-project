@@ -1,0 +1,24 @@
+/*
+==================================================================
+Create Databases (MySQL)
+==================================================================
+Purpose:
+
+This script creates the Bronze, Silver and Gold layers of the data WareHouse. After checking if the databases doesn't exist yet.
+If the databases exist it will drop and recreate a new databases.
+
+In this MySQL implementation, each layer is represented as a separate database to align with MySQL's schema model.
+
+*/
+
+-- Create Bronze layer (raw data) -- 
+DROP DATABASE IF EXISTS bronze;
+CREATE DATABASE bronze;
+
+-- Create Silver layer (cleaned and transformed data) -- 
+DROP DATABASE IF EXISTS silver;
+CREATE DATABASE  silver;
+
+-- Create Gold layer (analytics and reporting) -- 
+DROP DATABASE IF EXISTS gold;
+CREATE DATABASE  gold;
