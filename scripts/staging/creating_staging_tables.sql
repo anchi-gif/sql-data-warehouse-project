@@ -14,7 +14,7 @@ cst_id              NVARCHAR(255),
 cst_key             NVARCHAR(255),
 cst_firstname       NVARCHAR(255),
 cst_lastname        NVARCHAR(255),
-cst_material_status NVARCHAR(255),
+cst_marital_status NVARCHAR(255),
 cst_gndr            NVARCHAR(255),
 cst_create_date     NVARCHAR(255)
 );
