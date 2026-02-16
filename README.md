@@ -1,55 +1,82 @@
 # sql-data-warehouse-project
-Building a modern warehouse with MySQL, including ETL process, data modeling, and analytics.
+
+Building a modern *Data Warehouse solution using MySQL*, including ETL processes, dimensional modeling, and analytical reporting.
+
+---
 
 ## 📖 Project Overview
-This project demonstrates the design and implimentation of a modern warehouse and analytics solution using **MySQL**.
 
-The project is inspired by the *Data with Baraa* SQL-based course and has been **adapted to MySQL**, with adjustments to SQL syntax and tooling.
+This project demonstrates the design and implementation of a modern *Data Warehouse architecture* using MySQL.
+
+It covers the full pipeline from raw data ingestion to business-ready analytical views.
+
+The project is inspired by the Data with Baraa SQL course and has been adapted to MySQL, including syntax adjustments and feature substitutions where required.
 
 ---
 
 ## 🏗️ Architecture Overview
-This project is structured into two main phases:
 
-1. **Data Warehouse Development**
-   - Ingesting raw data from CSV files
-   - Performing data cleaning and transformation
-   - Designing and implementing a dimensional data model (fact and dimension tables)
+The project follows a layered Data Warehouse architecture:
 
-2. **Analytics & Reporting**
-   - Writing analytical SQL queries
-   - Generating insights from the data warehouse
+1. *Bronze Layer* – Raw data ingestion  
+   - Data loaded from CSV files using Python (Pandas)  
+   - Stored without transformation  
 
-An architecture diagram was designed during the planning phase to clearly define data flow and  system components.
+2. *Silver Layer* – Data cleansing & standardization  
+   - Data validation  
+   - Null handling  
+   - Deduplication  
+   - Data type normalization  
+   - Business rule enforcement  
+
+3. *Gold Layer* – Business-ready dimensional model  
+   - Fact table for transactional sales  
+   - Dimension tables for customers and products  
+   - Optimized for analytical queries  
+
+An architecture diagram was designed using Draw.io to document data flow and system structure.
 
 ---
 
-## 🔄️ ETL Process
-The ETL workflow follows these steps:
+## 🔄 ETL Process
 
-- **Extract**: Load raw data from CSV files
-- **Transformation**: Clean, normalize, and prepare data for analysis
-- **Load**: Store transformation data into MySQL-based data warehouse
+The ETL workflow follows these structured steps:
+
+- *Extract*  
+  Raw data loaded from CSV files using Python (Pandas)
+
+- *Transform*  
+  Data cleaning and transformation performed inside MySQL using:
+  - Stored procedures
+  - Window functions
+  - Conditional logic
+  - Data validation rules
+
+- *Load*  
+  Cleaned data inserted into structured warehouse tables (Bronze → Silver → Gold)
 
 ---
 
-## 🏗️ Data Modeling
-The data warehouse is modeled using **dimensional modeling techniques**, including:
+## 🧱 Data Modeling
 
-- Fact tables for measurable business metrics
+The warehouse is designed using *Dimensional Modeling principles*:
+
+- Star schema design
+- Surrogate keys (ROW_NUMBER)
+- Fact table for measurable business metrics
 - Dimension tables for descriptive attributes
-- Optimized schema design for analytical queries
+- Data integrity validation
 
 ---
 
 ## 🛠️ Tools & Technologies
-- **MySQL** (Relational Database)
-- **MySQL Workbench** (Database Management Tool)
-- **CSV Files** (Source Data)
-- **GitHub** (Version Control)
-- **Draw.io** (Architecture & Data Modeling Diagrams)
 
+- *MySQL 8.x* – Relational Database
+- *MySQL Workbench* – Database management
+- *Python (Pandas)* – Data ingestion
+- *CSV Files* – Source data
+- *Git & GitHub* – Version control
+- *Draw.io* – Architecture & data modeling diagrams
 ---
-
 ## 📄 License
 This project is licenced under the MIT License. See the `LICENSE` file for details.
