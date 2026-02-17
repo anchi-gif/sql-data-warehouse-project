@@ -15,12 +15,12 @@
 | customer_key     | INT         | Surrogate key uniquely identifying each customer, generated using ROW_NUMBER(). |
 | customer_id      | INT         | Original customer identifier from the source system.  |
 | customer_number  | VARCHAR(50) | Alphanumeric identifier representing the customer used for tracking and referencing. |
-| fist_name        | VARCHAR(50) | Customer first name. |
-| las_tname        | VARCHAR(50) | Customer last name or family name. |
+| first_name       | VARCHAR(50) | Customer first name. |
+| last_tname       | VARCHAR(50) | Customer last name or family name. |
 | country          | VARCHAR(50) | Customer's country of residence (e.g., 'Australia'). |
-| marital_status   |VARCHAR(50)  | Marital status (e.g., 'Maried'; 'Single').|
+| marital_status   |VARCHAR(50)  | Marital status (e.g., 'Married'; 'Single').|
 | gender           |VARCHAR(50)  | Standardized gender value (e.g., 'Male', 'Female', 'n/a'). |
-| brithdate        | DATE        | Date of birth of the customer, formated as YYY-MM-DD (e.g., 1971-10-06). |
+| birthdate        | DATE        | Date of birth of the customer, formated as YYY-MM-DD (e.g., 1971-10-06). |
 | create_date      | DATE        | Date and time when the customer record was created in the system. | 
 ---
 **2. gold.dim_products**
